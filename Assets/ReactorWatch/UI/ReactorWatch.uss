@@ -1,0 +1,156 @@
+/* Reactor Watch HUD: the only stylesheet. Numbers from ui-hud-kit reference.md.
+   Reference pixels at 1280 x 720, scaled by height. Edge margin 48. Smallest font 22.
+   Width budget at 1280: heat 48-298 · banner 480-800 · right column 1042-1232. */
+
+.fill, .overlay-holder {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+}
+
+.hud-root, .fill { color: rgb(235, 240, 245); }
+
+.panel {
+    position: absolute;
+    background-color: rgba(10, 14, 20, 0.7);
+    border-radius: 6px;
+    padding: 6px 10px;
+}
+.panel--extra { background-color: rgba(10, 14, 20, 0.5); }
+
+.caption {
+    font-size: 22px;
+    color: rgb(170, 180, 190);
+    margin: 0; padding: 0;
+}
+
+/* Heat (main), top left */
+.heat-panel { left: 48px; top: 48px; width: 250px; }
+.heat-row { flex-direction: row; align-items: center; justify-content: space-between; }
+.heat-bar {
+    width: 170px;
+    height: 18px;
+    background-color: rgb(40, 44, 52);
+    border-radius: 3px;
+    overflow: hidden;
+}
+.heat-fill { height: 100%; width: 40%; }
+.heat--green  { background-color: rgb(60, 200, 90); }
+.heat--yellow { background-color: rgb(240, 200, 40); }
+.heat--red    { background-color: rgb(230, 50, 40); }
+.heat-value {
+    font-size: 28px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-right;
+    margin: 0; padding: 0;
+}
+.blink-off { opacity: 0.15; }
+
+/* Right column: countdown (main) and valve list (extra) */
+.right-column {
+    position: absolute;
+    right: 48px; top: 48px;
+    width: 190px;
+    align-items: flex-end;
+}
+.right-column > .panel { position: relative; }
+.countdown {
+    font-size: 30px;
+    -unity-font-style: bold;
+    margin: 0; padding: 0;
+}
+.valve-panel {
+    position: absolute;
+    top: 56px;               /* 48 + 56 = 104 from the top edge */
+    left: 0; right: 0;
+}
+.right-column > .valve-panel { position: absolute; }
+.valve-row { flex-direction: row; align-items: center; }
+.valve-id {
+    width: 26px;
+    font-size: 22px;
+    -unity-font-style: bold;
+    margin: 0; padding: 0;
+}
+.valve-state {
+    font-size: 22px;
+    color: rgb(110, 210, 125);
+    margin: 0; padding: 0;
+}
+.valve--open .valve-state { color: rgb(110, 175, 255); }
+.valve--cooldown { opacity: 0.55; }
+.valve--cooldown .valve-state { color: rgb(150, 150, 150); }
+
+/* Crosshair */
+.crosshair {
+    position: absolute;
+    left: 50%; top: 50%;
+    width: 4px; height: 4px;
+    margin-left: -2px; margin-top: -2px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+/* Interact prompt */
+.prompt-holder {
+    position: absolute;
+    left: 0; right: 0; bottom: 140px;
+    align-items: center;
+}
+.prompt {
+    font-size: 24px;
+    background-color: rgba(10, 14, 20, 0.7);
+    border-radius: 4px;
+    padding: 4px 12px;
+    margin: 0;
+}
+
+/* Warning banner: slides in from the top in 0.3 s */
+.banner-holder {
+    position: absolute;
+    left: 0; right: 0; top: 48px;
+    align-items: center;
+}
+.banner {
+    width: 320px;
+    font-size: 26px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(230, 50, 40);
+    border-radius: 4px;
+    padding: 6px;
+    margin: 0;
+    translate: 0 -160px;
+    transition-property: translate;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+.banner--shown { translate: 0 0; }
+
+/* Pause menu and end screen */
+.overlay {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    align-items: center;
+    justify-content: center;
+    color: rgb(235, 240, 245);
+}
+.menu-box { align-items: center; }
+.menu-title {
+    font-size: 46px;
+    -unity-font-style: bold;
+    margin: 0 0 12px 0;
+}
+.menu-text {
+    font-size: 24px;
+    margin: 0 0 12px 0;
+}
+.menu-button {
+    width: 220px;
+    height: 44px;
+    font-size: 24px;
+    margin: 6px;
+}
+
+.hidden { display: none; }

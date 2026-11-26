@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <Style src="ReactorWatch.uss" />
+    <ui:VisualElement name="end-screen" class="overlay">
+        <ui:VisualElement class="menu-box">
+            <ui:Label name="end-title" text="REACTOR STABLE" class="menu-title" />
+            <ui:Label name="end-time" text="Time survived 02:00" class="menu-text" />
+            <ui:Button name="end-restart" text="Restart" class="menu-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,36 @@
+/* Echo Caverns HUD (ui-hud-kit reference: 1280x720, scale by height, 48px margins, min font 22). */
+.hidden { display: none; }
+.hud-root { position: absolute; left: 0; top: 0; right: 0; bottom: 0; }
+.panel {
+    position: absolute;
+    background-color: rgba(10, 14, 20, 0.7);
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+/* main info */
+.timer { right: 48px; top: 48px; font-size: 30px; color: white; -unity-font-style: bold; }
+/* extra info: small */
+.secrets {
+    right: 48px; top: 104px;
+    font-size: 22px; color: rgb(200, 160, 255);
+    background-color: rgba(10, 14, 20, 0.5);
+}
+.message-holder { position: absolute; left: 0; right: 0; top: 160px; align-items: center; }
+.message {
+    font-size: 24px; color: white;
+    background-color: rgba(10, 14, 20, 0.7);
+    padding: 4px 12px; border-radius: 4px;
+}
+.overlay {
+    position: absolute; left: 0; top: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    align-items: center; justify-content: center;
+}
+.overlay-title { font-size: 46px; color: rgb(255, 210, 90); -unity-font-style: bold; margin-bottom: 10px; }
+.overlay-text { font-size: 24px; color: rgb(220, 220, 220); margin-bottom: 16px; }
+.hint { font-size: 22px; color: rgb(170, 175, 185); }
+
+/* metrics gym readout */
+.readout { left: 48px; top: 48px; width: 560px; }
+.readout-line { font-size: 22px; color: white; margin: 1px 0; padding: 0; }
+.readout-caption { font-size: 22px; color: rgb(160, 170, 180); margin: 0 0 4px 0; padding: 0; }
