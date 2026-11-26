@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <Style src="EchoCaverns.uss" />
+    <ui:VisualElement class="hud-root" picking-mode="Ignore">
+        <ui:VisualElement class="panel readout" picking-mode="Ignore">
+            <ui:Label text="METRICS GYM   (Shift run · Space jump · C crouch · R restart)" class="readout-caption" picking-mode="Ignore" />
+            <ui:Label name="speed" text="Walk speed: walk (no Shift) through the 20 m track" class="readout-line" picking-mode="Ignore" />
+            <ui:Label name="last-jump" text="Last jump: -" class="readout-line" picking-mode="Ignore" />
+            <ui:Label name="best-jump" text="Best: -" class="readout-line" picking-mode="Ignore" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

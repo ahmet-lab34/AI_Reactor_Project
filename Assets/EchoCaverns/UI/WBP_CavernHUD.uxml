@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <Style src="EchoCaverns.uss" />
+    <ui:VisualElement class="hud-root" picking-mode="Ignore">
+        <ui:Label name="timer" text="00:00.0" class="panel timer" picking-mode="Ignore" />
+        <ui:Label name="secrets" text="Secret 0/1" class="panel secrets" picking-mode="Ignore" />
+        <ui:VisualElement class="message-holder" picking-mode="Ignore">
+            <ui:Label name="message" text="Checkpoint" class="message hidden" picking-mode="Ignore" />
+        </ui:VisualElement>
+        <ui:VisualElement name="escaped-root" class="overlay hidden" picking-mode="Ignore">
+            <ui:Label text="ESCAPED" class="overlay-title" picking-mode="Ignore" />
+            <ui:Label name="escaped-text" text="Time 00:00.0   ·   Secrets 0/1" class="overlay-text" picking-mode="Ignore" />
+            <ui:Label text="[R] Restart" class="hint" picking-mode="Ignore" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
