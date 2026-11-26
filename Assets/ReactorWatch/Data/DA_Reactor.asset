@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc61ecf34bdf4aba971c4d465bc52c58, type: 3}
+  m_Name: DA_Reactor
+  m_EditorClassIdentifier: 
+  startHeat: 40
+  heatPerSecond: 2.5
+  lateHeatPerSecond: 3.5
+  lateAfterSeconds: 60
+  meltdownHeat: 100
+  surviveSeconds: 120
+  valveRange: 2
+  valveOpenSeconds: 6
+  valveCoolPerSecond: 5
+  valveCooldownSeconds: 10
+  yellowFromHeat: 60
+  redFromHeat: 85
+  criticalHeat: 85
+  blinkAboveHeat: 90
+  blinksPerSecond: 4
+  bannerSlideSeconds: 0.3
+  moveSpeed: 4
+  lookSensitivity: 0.1

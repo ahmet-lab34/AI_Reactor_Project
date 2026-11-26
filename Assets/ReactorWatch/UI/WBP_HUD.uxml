@@ -1,0 +1,46 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <Style src="ReactorWatch.uss" />
+    <ui:VisualElement name="hud-root" class="fill" picking-mode="Ignore">
+
+        <ui:VisualElement name="heat-panel" class="panel heat-panel" picking-mode="Ignore">
+            <ui:Label text="CORE HEAT" class="caption" picking-mode="Ignore" />
+            <ui:VisualElement class="heat-row" picking-mode="Ignore">
+                <ui:VisualElement class="heat-bar" picking-mode="Ignore">
+                    <ui:VisualElement name="heat-fill" class="heat-fill heat--green" picking-mode="Ignore" />
+                </ui:VisualElement>
+                <ui:Label name="heat-value" text="40" class="heat-value" picking-mode="Ignore" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement class="right-column" picking-mode="Ignore">
+            <ui:VisualElement class="panel countdown-panel" picking-mode="Ignore">
+                <ui:Label name="countdown" text="02:00" class="countdown" picking-mode="Ignore" />
+            </ui:VisualElement>
+            <ui:VisualElement name="valve-panel" class="panel panel--extra valve-panel" picking-mode="Ignore">
+                <ui:VisualElement name="valve-A" class="valve-row" picking-mode="Ignore">
+                    <ui:Label text="A" class="valve-id" picking-mode="Ignore" />
+                    <ui:Label name="valve-A-state" text="READY" class="valve-state" picking-mode="Ignore" />
+                </ui:VisualElement>
+                <ui:VisualElement name="valve-B" class="valve-row" picking-mode="Ignore">
+                    <ui:Label text="B" class="valve-id" picking-mode="Ignore" />
+                    <ui:Label name="valve-B-state" text="READY" class="valve-state" picking-mode="Ignore" />
+                </ui:VisualElement>
+                <ui:VisualElement name="valve-C" class="valve-row" picking-mode="Ignore">
+                    <ui:Label text="C" class="valve-id" picking-mode="Ignore" />
+                    <ui:Label name="valve-C-state" text="READY" class="valve-state" picking-mode="Ignore" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement class="crosshair" picking-mode="Ignore" />
+
+        <ui:VisualElement class="prompt-holder" picking-mode="Ignore">
+            <ui:Label name="prompt" text="[E] Open valve" class="prompt hidden" picking-mode="Ignore" />
+        </ui:VisualElement>
+
+        <ui:VisualElement class="banner-holder" picking-mode="Ignore">
+            <ui:Label name="banner" text="CORE CRITICAL" class="banner" picking-mode="Ignore" />
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>
